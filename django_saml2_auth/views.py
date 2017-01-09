@@ -60,7 +60,7 @@ def get_reverse(objs):
 def _get_saml_client(domain):
     acs_url = domain + get_reverse([acs, 'acs', 'django_saml2_auth:acs'])
     entity_id = settings.SAML2_AUTH['ENTITY_ID'] or acs_url
-    time_slack = settings.SAML2_ATUH['TIMESLACK'] or 0
+    time_slack = settings.SAML2_AUTH['TIMESLACK'] or 0
     import tempfile
     tmp = tempfile.NamedTemporaryFile()
     f = open(tmp.name, 'wb')
