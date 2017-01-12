@@ -3,7 +3,7 @@ Django SAML2 Authentication Made Easy
 =====================================
 
 :Author: Fang Li
-:Version: 1.1.5
+:Version: 1.1.6
 
 .. image:: https://img.shields.io/pypi/pyversions/django-saml2-auth.svg
     :target: https://pypi.python.org/pypi/django-saml2-auth
@@ -117,7 +117,7 @@ How to use?
             'METADATA_AUTO_CONF_URL': '[The auto(dynamic) metadata configuration URL of SAML2]',
 
             # Optional settings
-            'ENEITY_ID': 'my-entity-id',
+            'ENTITY_ID': 'my-entity-id',
             'NEW_USER_PROFILE': {
                 'USER_GROUPS': [],  # The default group name when a new user logs in
                 'ACTIVE_STATUS': True,  # The default active status for new users
@@ -134,6 +134,7 @@ How to use?
                 'CREATE_USER': 'path.to.your.new.user.hook.method',
                 'BEFORE_LOGIN': 'path.to.your.login.hook.method',
             },
+            'TIMESLACK': 60, # The permissable number of seconds difference between the SP and IdP clocks
         }
 
 #. In your SAML2 SSO identity provider, set the Single-sign-on URL and Audience
@@ -226,6 +227,8 @@ How to Contribute
 
 Release Log
 ===========
+
+1.1.6: Added TIMESLACK configuration option
 
 1.1.5: Fixed Django 1.10 support.
 
