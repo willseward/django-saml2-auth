@@ -21,3 +21,4 @@ Contributors
 
 - `Gene Wood <http://github.com/gene1wood/>`_
 - `Terry <https://github.com/tpeng>`_
+- `William Ward <wills.e.ward@tcu.edu>`_
